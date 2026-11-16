@@ -63,7 +63,7 @@ Enter Employee ID: EMP101
 Enter Basic Salary: 30000
 
 ------ EMPLOYEE PAYROLL REPORT ------
-Employee Name : Raghav
+Employee Name : Rakhav
 Employee ID   : EMP101
 Basic Salary  : Rs. 30000.00
 HRA           : Rs. 4500.00
