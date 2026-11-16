@@ -28,36 +28,34 @@ To collect employee details, validate inputs, and calculate gross and net salary
 
 ## Program
 
+name = input("Enter Employee Name: ")
+emp_id = input("Enter Employee ID: ")
+basic = float(input("Enter Basic Salary: "))
+
+if basic < 0:
+    print("Error: Salary cannot be negative.")
+else:
+    hra = 0.15 * basic
+    da = 0.10 * basic
+
+    gross = basic + hra + da
+
+    tax = 0.08 * gross
+
+    net = gross - tax
+
+    print("\n------ EMPLOYEE PAYROLL REPORT ------")
+    print("Employee Name :", name)
+    print("Employee ID   :", emp_id)
+    print("Basic Salary  : Rs.", format(basic, ".2f"))
+    print("HRA           : Rs.", format(hra, ".2f"))
+    print("DA            : Rs.", format(da, ".2f"))
+    print("Gross Salary  : Rs.", format(gross, ".2f"))
+    print("Tax           : Rs.", format(tax, ".2f"))
+    print("Net Salary    : Rs.", format(net, ".2f"))
+
 
 ## Output
-
-    name = input("Enter Employee Name: ")
-    emp_id = input("Enter Employee ID: ")
-    basic = float(input("Enter Basic Salary: "))
-
-    if basic < 0:
-        print("Error: Salary cannot be negative.")
-    else:
-        hra = 0.15 * basic
-        da = 0.10 * basic
-
-        gross = basic + hra + da
-
-        tax = 0.08 * gross
-
-        net = gross - tax
-
-        print("\n------ EMPLOYEE PAYROLL REPORT ------")
-        print("Employee Name :", name)
-        print("Employee ID   :", emp_id)
-        print("Basic Salary  : Rs.", format(basic, ".2f"))
-        print("HRA           : Rs.", format(hra, ".2f"))
-        print("DA            : Rs.", format(da, ".2f"))
-        print("Gross Salary  : Rs.", format(gross, ".2f"))
-        print("Tax           : Rs.", format(tax, ".2f"))
-        print("Net Salary    : Rs.", format(net, ".2f"))
-
-## ✅ Result
 Enter Employee Name: Rakhav
 Enter Employee ID: EMP101
 Enter Basic Salary: 30000
@@ -71,5 +69,8 @@ DA            : Rs. 3000.00
 Gross Salary  : Rs. 37500.00
 Tax           : Rs. 3000.00
 Net Salary    : Rs. 34500.00
+
+
+## ✅ Result
 
 The program successfully accepts and validates employee details, calculates allowances and deductions, and displays a well-formatted salary report.
